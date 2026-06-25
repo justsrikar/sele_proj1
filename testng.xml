@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite data-provider-thread-count="1" name="Default Test Name" parallel="methods" thread-count="2" verbose="1">
+
+    <listeners>
+        <listener class-name="org.example.reporting.TestListener"/>
+    </listeners>
+    <test name="Test">
+
+        <parameter name="browser" value="CHROME" />
+        <parameter name="hubUrl" value="http://chrome-node:4444/wd/hub"/>
+
+        <classes>
+            <class name="tests.RBAuctionTests" />
+
+            <!-- Add more classes if needed -->
+        </classes>
+    </test>
+</suite>
